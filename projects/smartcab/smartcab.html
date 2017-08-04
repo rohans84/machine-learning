@@ -11977,7 +11977,7 @@ Run the agent.py file after setting the flags from projects/smartcab folder inst
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[31]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Load the &#39;sim_no-learning&#39; log file from the initial simulation results</span>
@@ -17213,6 +17213,9 @@ ZmYV4gLLzMzMzMysQv4PVIvtopQqdG0AAAAASUVORK5CYII=
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer:</strong>
 Not sure of the answer but one possible reason could be the difficulty in predicting future state as other agents would also be moving forward or taking left and right. Predicting future state would require very laarge of training trials as well as including states of all other vehicles. In a 100 dummy agent environment, the state space would become too large.</p>
+<p><strong>Additional Points</strong></p>
+<p>The smart cab is aware of the waypoint and hence knows the immediate action to take. Since the destination point is a known factor, agent is aware of the route to take and hence concept of future rewards does not play a role in this situation.</p>
+<p>Also, the smartcab's state is kept in terms of its immediate environment and does not account for future. Action taken in a particular state does not completely impact any of the future states as the environment keeps changing.</p>
 
 </div>
 </div>
