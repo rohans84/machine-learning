@@ -1,0 +1,1114 @@
+/-----------------------------------------
+| State-action rewards from Q-Learning
+\-----------------------------------------
+
+('light:red', 'waypoint:left', 'vehicle_left:left', 'vehicle_right:None', 'vehicle_oncoming:left')
+ -- forward : 0.00
+ -- None : 0.69
+ -- right : 0.00
+ -- left : 0.00
+
+('light:red', 'waypoint:left', 'vehicle_left:left', 'vehicle_right:None', 'vehicle_oncoming:None')
+ -- forward : 0.00
+ -- None : 1.36
+ -- right : 0.00
+ -- left : 0.00
+
+('light:red', 'waypoint:left', 'vehicle_left:None', 'vehicle_right:left', 'vehicle_oncoming:None')
+ -- forward : -5.34
+ -- None : 0.97
+ -- right : 0.00
+ -- left : -7.20
+
+('light:red', 'waypoint:forward', 'vehicle_left:forward', 'vehicle_right:left', 'vehicle_oncoming:forward')
+ -- forward : 0.00
+ -- None : 0.00
+ -- right : -9.54
+ -- left : 0.00
+
+('light:red', 'waypoint:right', 'vehicle_left:forward', 'vehicle_right:None', 'vehicle_oncoming:forward')
+ -- forward : 0.00
+ -- None : 0.00
+ -- right : 0.00
+ -- left : -20.49
+
+('light:red', 'waypoint:right', 'vehicle_left:left', 'vehicle_right:left', 'vehicle_oncoming:None')
+ -- forward : 0.00
+ -- None : 0.00
+ -- right : 0.00
+ -- left : -5.42
+
+('light:red', 'waypoint:forward', 'vehicle_left:forward', 'vehicle_right:forward', 'vehicle_oncoming:None')
+ -- forward : 0.00
+ -- None : 0.00
+ -- right : 0.00
+ -- left : -20.34
+
+('light:green', 'waypoint:forward', 'vehicle_left:forward', 'vehicle_right:None', 'vehicle_oncoming:left')
+ -- forward : 0.00
+ -- None : 0.00
+ -- right : 0.00
+ -- left : 0.00
+
+('light:red', 'waypoint:left', 'vehicle_left:None', 'vehicle_right:forward', 'vehicle_oncoming:right')
+ -- forward : -20.33
+ -- None : 0.00
+ -- right : 0.00
+ -- left : 0.00
+
+('light:red', 'waypoint:forward', 'vehicle_left:None', 'vehicle_right:left', 'vehicle_oncoming:right')
+ -- forward : 0.00
+ -- None : 0.00
+ -- right : 0.76
+ -- left : 0.00
+
+('light:red', 'waypoint:forward', 'vehicle_left:right', 'vehicle_right:forward', 'vehicle_oncoming:None')
+ -- forward : 0.00
+ -- None : 1.18
+ -- right : 0.00
+ -- left : 0.00
+
+('light:green', 'waypoint:left', 'vehicle_left:forward', 'vehicle_right:left', 'vehicle_oncoming:None')
+ -- forward : 0.00
+ -- None : -2.37
+ -- right : 0.00
+ -- left : 0.00
+
+('light:red', 'waypoint:left', 'vehicle_left:forward', 'vehicle_right:None', 'vehicle_oncoming:forward')
+ -- forward : 0.00
+ -- None : 0.00
+ -- right : 0.00
+ -- left : -19.82
+
+('light:red', 'waypoint:left', 'vehicle_left:right', 'vehicle_right:left', 'vehicle_oncoming:left')
+ -- forward : 0.00
+ -- None : 0.00
+ -- right : 0.29
+ -- left : 0.00
+
+('light:red', 'waypoint:left', 'vehicle_left:right', 'vehicle_right:left', 'vehicle_oncoming:forward')
+ -- forward : -5.04
+ -- None : 0.00
+ -- right : 0.00
+ -- left : 0.00
+
+('light:red', 'waypoint:right', 'vehicle_left:left', 'vehicle_right:forward', 'vehicle_oncoming:None')
+ -- forward : 0.00
+ -- None : 0.00
+ -- right : 0.00
+ -- left : -20.19
+
+('light:red', 'waypoint:left', 'vehicle_left:forward', 'vehicle_right:forward', 'vehicle_oncoming:forward')
+ -- forward : 0.00
+ -- None : 0.00
+ -- right : -10.37
+ -- left : 0.00
+
+('light:red', 'waypoint:forward', 'vehicle_left:None', 'vehicle_right:None', 'vehicle_oncoming:left')
+ -- forward : 0.00
+ -- None : 2.21
+ -- right : 0.00
+ -- left : -4.90
+
+('light:green', 'waypoint:right', 'vehicle_left:left', 'vehicle_right:forward', 'vehicle_oncoming:right')
+ -- forward : 0.00
+ -- None : 0.00
+ -- right : 0.98
+ -- left : 0.00
+
+('light:green', 'waypoint:left', 'vehicle_left:None', 'vehicle_right:right', 'vehicle_oncoming:left')
+ -- forward : 0.00
+ -- None : 0.00
+ -- right : 0.14
+ -- left : 0.00
+
+('light:green', 'waypoint:left', 'vehicle_left:None', 'vehicle_right:right', 'vehicle_oncoming:None')
+ -- forward : -0.05
+ -- None : -2.37
+ -- right : 1.14
+ -- left : 0.00
+
+('light:red', 'waypoint:right', 'vehicle_left:None', 'vehicle_right:forward', 'vehicle_oncoming:forward')
+ -- forward : 0.00
+ -- None : 0.00
+ -- right : 0.00
+ -- left : -20.28
+
+('light:green', 'waypoint:left', 'vehicle_left:left', 'vehicle_right:left', 'vehicle_oncoming:None')
+ -- forward : 0.00
+ -- None : 0.00
+ -- right : 0.00
+ -- left : 0.59
+
+('light:red', 'waypoint:left', 'vehicle_left:left', 'vehicle_right:left', 'vehicle_oncoming:forward')
+ -- forward : 0.00
+ -- None : 0.00
+ -- right : 0.00
+ -- left : 0.00
+
+('light:green', 'waypoint:left', 'vehicle_left:left', 'vehicle_right:left', 'vehicle_oncoming:left')
+ -- forward : 0.00
+ -- None : -2.57
+ -- right : 0.94
+ -- left : 0.00
+
+('light:red', 'waypoint:left', 'vehicle_left:None', 'vehicle_right:forward', 'vehicle_oncoming:None')
+ -- forward : 0.00
+ -- None : 1.82
+ -- right : 0.00
+ -- left : -19.50
+
+('light:green', 'waypoint:forward', 'vehicle_left:None', 'vehicle_right:right', 'vehicle_oncoming:None')
+ -- forward : 0.00
+ -- None : -2.86
+ -- right : 0.72
+ -- left : 0.00
+
+('light:green', 'waypoint:left', 'vehicle_left:None', 'vehicle_right:None', 'vehicle_oncoming:left')
+ -- forward : 0.26
+ -- None : -2.18
+ -- right : 0.00
+ -- left : 0.00
+
+('light:green', 'waypoint:left', 'vehicle_left:forward', 'vehicle_right:None', 'vehicle_oncoming:forward')
+ -- forward : 0.00
+ -- None : 0.00
+ -- right : -0.21
+ -- left : 0.00
+
+('light:red', 'waypoint:left', 'vehicle_left:left', 'vehicle_right:forward', 'vehicle_oncoming:None')
+ -- forward : -19.59
+ -- None : 0.00
+ -- right : 0.00
+ -- left : -20.31
+
+('light:red', 'waypoint:forward', 'vehicle_left:None', 'vehicle_right:forward', 'vehicle_oncoming:None')
+ -- forward : 0.00
+ -- None : 0.00
+ -- right : 0.50
+ -- left : 0.00
+
+('light:red', 'waypoint:forward', 'vehicle_left:None', 'vehicle_right:left', 'vehicle_oncoming:forward')
+ -- forward : 0.00
+ -- None : 0.00
+ -- right : 0.00
+ -- left : 0.00
+
+('light:green', 'waypoint:left', 'vehicle_left:None', 'vehicle_right:right', 'vehicle_oncoming:right')
+ -- forward : 0.00
+ -- None : -2.23
+ -- right : 0.00
+ -- left : 0.00
+
+('light:red', 'waypoint:forward', 'vehicle_left:forward', 'vehicle_right:left', 'vehicle_oncoming:None')
+ -- forward : -19.73
+ -- None : 0.49
+ -- right : 0.00
+ -- left : 0.00
+
+('light:red', 'waypoint:left', 'vehicle_left:right', 'vehicle_right:None', 'vehicle_oncoming:None')
+ -- forward : 0.00
+ -- None : 0.00
+ -- right : 0.00
+ -- left : 0.00
+
+('light:red', 'waypoint:right', 'vehicle_left:forward', 'vehicle_right:None', 'vehicle_oncoming:None')
+ -- forward : -19.97
+ -- None : 0.41
+ -- right : 0.00
+ -- left : 0.00
+
+('light:red', 'waypoint:left', 'vehicle_left:None', 'vehicle_right:None', 'vehicle_oncoming:right')
+ -- forward : 0.00
+ -- None : 0.96
+ -- right : 0.00
+ -- left : 0.00
+
+('light:green', 'waypoint:right', 'vehicle_left:forward', 'vehicle_right:None', 'vehicle_oncoming:right')
+ -- forward : 0.00
+ -- None : 0.00
+ -- right : 0.00
+ -- left : 0.23
+
+('light:red', 'waypoint:right', 'vehicle_left:right', 'vehicle_right:forward', 'vehicle_oncoming:forward')
+ -- forward : 0.00
+ -- None : 0.00
+ -- right : 0.24
+ -- left : 0.00
+
+('light:red', 'waypoint:right', 'vehicle_left:None', 'vehicle_right:None', 'vehicle_oncoming:None')
+ -- forward : -8.56
+ -- None : 0.59
+ -- right : 0.00
+ -- left : -9.99
+
+('light:red', 'waypoint:right', 'vehicle_left:None', 'vehicle_right:None', 'vehicle_oncoming:left')
+ -- forward : -8.66
+ -- None : 1.11
+ -- right : 1.50
+ -- left : -7.53
+
+('light:green', 'waypoint:forward', 'vehicle_left:right', 'vehicle_right:forward', 'vehicle_oncoming:forward')
+ -- forward : 0.00
+ -- None : -2.77
+ -- right : 0.00
+ -- left : 0.00
+
+('light:green', 'waypoint:left', 'vehicle_left:None', 'vehicle_right:left', 'vehicle_oncoming:forward')
+ -- forward : 0.00
+ -- None : 0.00
+ -- right : 0.00
+ -- left : 0.36
+
+('light:green', 'waypoint:left', 'vehicle_left:left', 'vehicle_right:right', 'vehicle_oncoming:left')
+ -- forward : 0.00
+ -- None : 0.00
+ -- right : 0.00
+ -- left : 0.00
+
+('light:red', 'waypoint:forward', 'vehicle_left:None', 'vehicle_right:None', 'vehicle_oncoming:right')
+ -- forward : -5.02
+ -- None : 0.00
+ -- right : 0.00
+ -- left : -19.96
+
+('light:green', 'waypoint:right', 'vehicle_left:left', 'vehicle_right:forward', 'vehicle_oncoming:left')
+ -- forward : 0.00
+ -- None : -2.43
+ -- right : 0.00
+ -- left : 0.00
+
+('light:green', 'waypoint:right', 'vehicle_left:left', 'vehicle_right:None', 'vehicle_oncoming:None')
+ -- forward : 0.00
+ -- None : 0.00
+ -- right : 0.00
+ -- left : 0.15
+
+('light:red', 'waypoint:right', 'vehicle_left:None', 'vehicle_right:forward', 'vehicle_oncoming:right')
+ -- forward : 0.00
+ -- None : 0.00
+ -- right : 0.00
+ -- left : -20.45
+
+('light:green', 'waypoint:forward', 'vehicle_left:None', 'vehicle_right:left', 'vehicle_oncoming:None')
+ -- forward : 0.00
+ -- None : 0.00
+ -- right : -0.00
+ -- left : 0.00
+
+('light:green', 'waypoint:forward', 'vehicle_left:None', 'vehicle_right:left', 'vehicle_oncoming:left')
+ -- forward : 0.00
+ -- None : 0.00
+ -- right : 0.70
+ -- left : 0.00
+
+('light:green', 'waypoint:left', 'vehicle_left:right', 'vehicle_right:None', 'vehicle_oncoming:right')
+ -- forward : 0.00
+ -- None : 0.00
+ -- right : 0.00
+ -- left : 0.00
+
+('light:green', 'waypoint:left', 'vehicle_left:None', 'vehicle_right:left', 'vehicle_oncoming:left')
+ -- forward : 0.62
+ -- None : 0.00
+ -- right : 0.00
+ -- left : 0.00
+
+('light:green', 'waypoint:left', 'vehicle_left:right', 'vehicle_right:left', 'vehicle_oncoming:forward')
+ -- forward : 0.00
+ -- None : 0.00
+ -- right : 0.00
+ -- left : 1.41
+
+('light:green', 'waypoint:forward', 'vehicle_left:left', 'vehicle_right:left', 'vehicle_oncoming:None')
+ -- forward : 0.66
+ -- None : 0.00
+ -- right : 0.00
+ -- left : 0.00
+
+('light:green', 'waypoint:forward', 'vehicle_left:left', 'vehicle_right:right', 'vehicle_oncoming:None')
+ -- forward : 0.80
+ -- None : 0.00
+ -- right : 0.00
+ -- left : 0.00
+
+('light:red', 'waypoint:left', 'vehicle_left:right', 'vehicle_right:None', 'vehicle_oncoming:right')
+ -- forward : -4.65
+ -- None : 0.68
+ -- right : 0.00
+ -- left : 0.00
+
+('light:green', 'waypoint:left', 'vehicle_left:forward', 'vehicle_right:left', 'vehicle_oncoming:forward')
+ -- forward : 0.00
+ -- None : 0.00
+ -- right : 0.00
+ -- left : 0.85
+
+('light:green', 'waypoint:left', 'vehicle_left:forward', 'vehicle_right:forward', 'vehicle_oncoming:None')
+ -- forward : 0.41
+ -- None : 0.00
+ -- right : 0.00
+ -- left : 0.00
+
+('light:green', 'waypoint:left', 'vehicle_left:forward', 'vehicle_right:forward', 'vehicle_oncoming:left')
+ -- forward : 0.35
+ -- None : 0.00
+ -- right : 0.00
+ -- left : 0.00
+
+('light:red', 'waypoint:left', 'vehicle_left:left', 'vehicle_right:left', 'vehicle_oncoming:None')
+ -- forward : 0.00
+ -- None : 0.00
+ -- right : 0.40
+ -- left : 0.00
+
+('light:green', 'waypoint:forward', 'vehicle_left:forward', 'vehicle_right:None', 'vehicle_oncoming:None')
+ -- forward : 0.00
+ -- None : -2.75
+ -- right : 0.13
+ -- left : 0.98
+
+('light:green', 'waypoint:forward', 'vehicle_left:None', 'vehicle_right:right', 'vehicle_oncoming:forward')
+ -- forward : 0.00
+ -- None : 0.00
+ -- right : 0.00
+ -- left : 0.72
+
+('light:red', 'waypoint:forward', 'vehicle_left:None', 'vehicle_right:right', 'vehicle_oncoming:right')
+ -- forward : 0.00
+ -- None : 1.22
+ -- right : 0.00
+ -- left : 0.00
+
+('light:green', 'waypoint:left', 'vehicle_left:forward', 'vehicle_right:left', 'vehicle_oncoming:left')
+ -- forward : 0.00
+ -- None : 0.00
+ -- right : 0.65
+ -- left : 1.13
+
+('light:red', 'waypoint:forward', 'vehicle_left:left', 'vehicle_right:right', 'vehicle_oncoming:forward')
+ -- forward : 0.00
+ -- None : 0.00
+ -- right : 0.00
+ -- left : 0.00
+
+('light:red', 'waypoint:forward', 'vehicle_left:forward', 'vehicle_right:right', 'vehicle_oncoming:None')
+ -- forward : 0.00
+ -- None : 1.17
+ -- right : 0.00
+ -- left : 0.00
+
+('light:red', 'waypoint:right', 'vehicle_left:None', 'vehicle_right:forward', 'vehicle_oncoming:None')
+ -- forward : -20.23
+ -- None : 0.00
+ -- right : 0.63
+ -- left : 0.00
+
+('light:red', 'waypoint:right', 'vehicle_left:None', 'vehicle_right:forward', 'vehicle_oncoming:left')
+ -- forward : 0.00
+ -- None : 0.01
+ -- right : 0.00
+ -- left : 0.00
+
+('light:red', 'waypoint:forward', 'vehicle_left:None', 'vehicle_right:None', 'vehicle_oncoming:None')
+ -- forward : -7.53
+ -- None : 1.69
+ -- right : 0.38
+ -- left : -6.92
+
+('light:red', 'waypoint:right', 'vehicle_left:left', 'vehicle_right:left', 'vehicle_oncoming:right')
+ -- forward : 0.00
+ -- None : 0.00
+ -- right : 0.00
+ -- left : 0.00
+
+('light:green', 'waypoint:right', 'vehicle_left:None', 'vehicle_right:None', 'vehicle_oncoming:right')
+ -- forward : 0.00
+ -- None : 0.00
+ -- right : 0.00
+ -- left : 0.00
+
+('light:red', 'waypoint:right', 'vehicle_left:forward', 'vehicle_right:left', 'vehicle_oncoming:None')
+ -- forward : -20.42
+ -- None : 0.00
+ -- right : 0.00
+ -- left : 0.00
+
+('light:red', 'waypoint:left', 'vehicle_left:None', 'vehicle_right:forward', 'vehicle_oncoming:left')
+ -- forward : 0.00
+ -- None : 0.00
+ -- right : 0.14
+ -- left : -19.87
+
+('light:green', 'waypoint:forward', 'vehicle_left:right', 'vehicle_right:right', 'vehicle_oncoming:None')
+ -- forward : 0.72
+ -- None : 0.00
+ -- right : 0.00
+ -- left : 0.00
+
+('light:red', 'waypoint:forward', 'vehicle_left:None', 'vehicle_right:left', 'vehicle_oncoming:None')
+ -- forward : 0.00
+ -- None : 1.36
+ -- right : -0.00
+ -- left : 0.00
+
+('light:red', 'waypoint:left', 'vehicle_left:left', 'vehicle_right:right', 'vehicle_oncoming:None')
+ -- forward : -4.56
+ -- None : 0.00
+ -- right : -0.14
+ -- left : 0.00
+
+('light:green', 'waypoint:left', 'vehicle_left:left', 'vehicle_right:None', 'vehicle_oncoming:right')
+ -- forward : 0.00
+ -- None : -4.12
+ -- right : 0.00
+ -- left : 0.00
+
+('light:red', 'waypoint:left', 'vehicle_left:right', 'vehicle_right:None', 'vehicle_oncoming:forward')
+ -- forward : 0.00
+ -- None : 0.00
+ -- right : 0.00
+ -- left : 0.00
+
+('light:red', 'waypoint:left', 'vehicle_left:None', 'vehicle_right:forward', 'vehicle_oncoming:forward')
+ -- forward : 0.00
+ -- None : 0.00
+ -- right : 0.00
+ -- left : -19.66
+
+('light:green', 'waypoint:forward', 'vehicle_left:left', 'vehicle_right:None', 'vehicle_oncoming:None')
+ -- forward : 0.35
+ -- None : 0.00
+ -- right : 0.69
+ -- left : 0.00
+
+('light:green', 'waypoint:forward', 'vehicle_left:left', 'vehicle_right:None', 'vehicle_oncoming:left')
+ -- forward : 1.66
+ -- None : -2.86
+ -- right : 0.00
+ -- left : 0.00
+
+('light:green', 'waypoint:left', 'vehicle_left:forward', 'vehicle_right:None', 'vehicle_oncoming:None')
+ -- forward : 0.00
+ -- None : -2.50
+ -- right : 0.00
+ -- left : 1.35
+
+('light:green', 'waypoint:left', 'vehicle_left:forward', 'vehicle_right:None', 'vehicle_oncoming:left')
+ -- forward : -0.24
+ -- None : 0.00
+ -- right : 0.24
+ -- left : 0.00
+
+('light:red', 'waypoint:left', 'vehicle_left:forward', 'vehicle_right:left', 'vehicle_oncoming:forward')
+ -- forward : -20.12
+ -- None : 0.00
+ -- right : 0.00
+ -- left : 0.00
+
+('light:red', 'waypoint:right', 'vehicle_left:forward', 'vehicle_right:forward', 'vehicle_oncoming:None')
+ -- forward : 0.00
+ -- None : 0.68
+ -- right : -9.51
+ -- left : 0.00
+
+('light:red', 'waypoint:right', 'vehicle_left:forward', 'vehicle_right:None', 'vehicle_oncoming:left')
+ -- forward : 0.00
+ -- None : 0.00
+ -- right : 0.00
+ -- left : -20.26
+
+('light:red', 'waypoint:forward', 'vehicle_left:left', 'vehicle_right:left', 'vehicle_oncoming:None')
+ -- forward : 0.00
+ -- None : 0.87
+ -- right : 0.00
+ -- left : 0.00
+
+('light:green', 'waypoint:forward', 'vehicle_left:None', 'vehicle_right:left', 'vehicle_oncoming:forward')
+ -- forward : 0.00
+ -- None : 0.00
+ -- right : -0.08
+ -- left : 0.00
+
+('light:green', 'waypoint:right', 'vehicle_left:None', 'vehicle_right:forward', 'vehicle_oncoming:None')
+ -- forward : 0.00
+ -- None : 0.00
+ -- right : 0.00
+ -- left : 0.30
+
+('light:red', 'waypoint:right', 'vehicle_left:forward', 'vehicle_right:left', 'vehicle_oncoming:right')
+ -- forward : 0.00
+ -- None : 0.00
+ -- right : 0.00
+ -- left : 0.00
+
+('light:red', 'waypoint:right', 'vehicle_left:None', 'vehicle_right:right', 'vehicle_oncoming:forward')
+ -- forward : 0.00
+ -- None : 0.00
+ -- right : 0.59
+ -- left : 0.00
+
+('light:red', 'waypoint:right', 'vehicle_left:right', 'vehicle_right:forward', 'vehicle_oncoming:left')
+ -- forward : 0.00
+ -- None : 0.91
+ -- right : 0.00
+ -- left : -20.49
+
+('light:red', 'waypoint:right', 'vehicle_left:None', 'vehicle_right:None', 'vehicle_oncoming:forward')
+ -- forward : 0.00
+ -- None : 0.98
+ -- right : 1.64
+ -- left : -5.08
+
+('light:green', 'waypoint:left', 'vehicle_left:None', 'vehicle_right:left', 'vehicle_oncoming:None')
+ -- forward : 0.77
+ -- None : 0.00
+ -- right : 0.00
+ -- left : 0.00
+
+('light:red', 'waypoint:left', 'vehicle_left:None', 'vehicle_right:None', 'vehicle_oncoming:None')
+ -- forward : -9.76
+ -- None : 1.97
+ -- right : 1.15
+ -- left : -7.67
+
+('light:green', 'waypoint:right', 'vehicle_left:forward', 'vehicle_right:None', 'vehicle_oncoming:None')
+ -- forward : 0.00
+ -- None : 0.00
+ -- right : 0.97
+ -- left : -0.04
+
+('light:green', 'waypoint:right', 'vehicle_left:left', 'vehicle_right:left', 'vehicle_oncoming:None')
+ -- forward : 0.00
+ -- None : 0.00
+ -- right : 1.29
+ -- left : 0.00
+
+('light:green', 'waypoint:left', 'vehicle_left:left', 'vehicle_right:None', 'vehicle_oncoming:forward')
+ -- forward : 0.00
+ -- None : -2.38
+ -- right : 0.00
+ -- left : 0.00
+
+('light:red', 'waypoint:left', 'vehicle_left:None', 'vehicle_right:left', 'vehicle_oncoming:forward')
+ -- forward : 0.00
+ -- None : 0.00
+ -- right : 0.00
+ -- left : -4.69
+
+('light:red', 'waypoint:forward', 'vehicle_left:None', 'vehicle_right:left', 'vehicle_oncoming:left')
+ -- forward : 0.00
+ -- None : 0.00
+ -- right : 0.00
+ -- left : 0.00
+
+('light:red', 'waypoint:left', 'vehicle_left:None', 'vehicle_right:left', 'vehicle_oncoming:right')
+ -- forward : 0.00
+ -- None : 0.00
+ -- right : 0.00
+ -- left : 0.00
+
+('light:green', 'waypoint:left', 'vehicle_left:right', 'vehicle_right:right', 'vehicle_oncoming:left')
+ -- forward : 0.00
+ -- None : 0.00
+ -- right : 0.00
+ -- left : 0.00
+
+('light:green', 'waypoint:left', 'vehicle_left:None', 'vehicle_right:None', 'vehicle_oncoming:forward')
+ -- forward : 0.49
+ -- None : -4.82
+ -- right : 0.74
+ -- left : 1.65
+
+('light:green', 'waypoint:left', 'vehicle_left:None', 'vehicle_right:forward', 'vehicle_oncoming:right')
+ -- forward : 0.00
+ -- None : 0.00
+ -- right : 0.00
+ -- left : 0.90
+
+('light:red', 'waypoint:left', 'vehicle_left:forward', 'vehicle_right:left', 'vehicle_oncoming:left')
+ -- forward : -19.74
+ -- None : 0.00
+ -- right : 0.00
+ -- left : 0.00
+
+('light:green', 'waypoint:forward', 'vehicle_left:None', 'vehicle_right:forward', 'vehicle_oncoming:forward')
+ -- forward : 0.00
+ -- None : 0.00
+ -- right : 0.00
+ -- left : 0.58
+
+('light:green', 'waypoint:right', 'vehicle_left:None', 'vehicle_right:left', 'vehicle_oncoming:left')
+ -- forward : 0.00
+ -- None : 0.00
+ -- right : 0.00
+ -- left : 0.87
+
+('light:green', 'waypoint:right', 'vehicle_left:None', 'vehicle_right:left', 'vehicle_oncoming:None')
+ -- forward : 0.51
+ -- None : -2.91
+ -- right : 0.00
+ -- left : 0.00
+
+('light:red', 'waypoint:forward', 'vehicle_left:forward', 'vehicle_right:None', 'vehicle_oncoming:None')
+ -- forward : -20.10
+ -- None : 0.00
+ -- right : 0.00
+ -- left : 0.00
+
+('light:red', 'waypoint:right', 'vehicle_left:None', 'vehicle_right:right', 'vehicle_oncoming:None')
+ -- forward : -5.24
+ -- None : 0.00
+ -- right : 0.00
+ -- left : 0.00
+
+('light:green', 'waypoint:left', 'vehicle_left:None', 'vehicle_right:left', 'vehicle_oncoming:right')
+ -- forward : 0.00
+ -- None : 0.00
+ -- right : 0.00
+ -- left : 0.00
+
+('light:red', 'waypoint:forward', 'vehicle_left:None', 'vehicle_right:None', 'vehicle_oncoming:forward')
+ -- forward : -5.32
+ -- None : 1.80
+ -- right : 0.00
+ -- left : 0.00
+
+('light:green', 'waypoint:forward', 'vehicle_left:None', 'vehicle_right:None', 'vehicle_oncoming:forward')
+ -- forward : 1.20
+ -- None : 0.00
+ -- right : 0.00
+ -- left : 0.00
+
+('light:red', 'waypoint:right', 'vehicle_left:right', 'vehicle_right:forward', 'vehicle_oncoming:right')
+ -- forward : 0.00
+ -- None : 0.00
+ -- right : 0.98
+ -- left : 0.00
+
+('light:red', 'waypoint:right', 'vehicle_left:None', 'vehicle_right:left', 'vehicle_oncoming:None')
+ -- forward : 0.00
+ -- None : 0.00
+ -- right : 0.83
+ -- left : -4.63
+
+('light:green', 'waypoint:left', 'vehicle_left:right', 'vehicle_right:None', 'vehicle_oncoming:None')
+ -- forward : 0.95
+ -- None : 0.00
+ -- right : 0.00
+ -- left : 0.00
+
+('light:red', 'waypoint:right', 'vehicle_left:left', 'vehicle_right:forward', 'vehicle_oncoming:right')
+ -- forward : 0.00
+ -- None : 0.00
+ -- right : 0.00
+ -- left : 0.00
+
+('light:red', 'waypoint:forward', 'vehicle_left:left', 'vehicle_right:right', 'vehicle_oncoming:None')
+ -- forward : 0.00
+ -- None : 0.32
+ -- right : 0.00
+ -- left : 0.00
+
+('light:green', 'waypoint:forward', 'vehicle_left:right', 'vehicle_right:None', 'vehicle_oncoming:None')
+ -- forward : 0.00
+ -- None : -2.60
+ -- right : 0.64
+ -- left : 0.00
+
+('light:green', 'waypoint:right', 'vehicle_left:forward', 'vehicle_right:right', 'vehicle_oncoming:None')
+ -- forward : 0.00
+ -- None : -2.66
+ -- right : 0.85
+ -- left : 0.00
+
+('light:red', 'waypoint:forward', 'vehicle_left:left', 'vehicle_right:None', 'vehicle_oncoming:forward')
+ -- forward : 0.00
+ -- None : 0.00
+ -- right : 0.00
+ -- left : 0.00
+
+('light:green', 'waypoint:left', 'vehicle_left:right', 'vehicle_right:forward', 'vehicle_oncoming:None')
+ -- forward : 0.00
+ -- None : 0.00
+ -- right : 0.00
+ -- left : 0.00
+
+('light:green', 'waypoint:right', 'vehicle_left:forward', 'vehicle_right:left', 'vehicle_oncoming:left')
+ -- forward : 0.13
+ -- None : 0.00
+ -- right : 0.00
+ -- left : 0.00
+
+('light:red', 'waypoint:right', 'vehicle_left:left', 'vehicle_right:None', 'vehicle_oncoming:left')
+ -- forward : -5.36
+ -- None : 0.00
+ -- right : 0.00
+ -- left : 0.00
+
+('light:green', 'waypoint:left', 'vehicle_left:None', 'vehicle_right:forward', 'vehicle_oncoming:None')
+ -- forward : 0.93
+ -- None : -2.22
+ -- right : 0.00
+ -- left : 0.00
+
+('light:red', 'waypoint:forward', 'vehicle_left:right', 'vehicle_right:None', 'vehicle_oncoming:None')
+ -- forward : 0.00
+ -- None : 1.11
+ -- right : 0.00
+ -- left : 0.00
+
+('light:red', 'waypoint:left', 'vehicle_left:forward', 'vehicle_right:left', 'vehicle_oncoming:None')
+ -- forward : -20.25
+ -- None : 0.43
+ -- right : 0.00
+ -- left : 0.00
+
+('light:red', 'waypoint:right', 'vehicle_left:right', 'vehicle_right:left', 'vehicle_oncoming:None')
+ -- forward : 0.00
+ -- None : 0.00
+ -- right : 0.83
+ -- left : 0.00
+
+('light:green', 'waypoint:left', 'vehicle_left:left', 'vehicle_right:forward', 'vehicle_oncoming:None')
+ -- forward : 0.00
+ -- None : 0.00
+ -- right : 0.03
+ -- left : 1.75
+
+('light:red', 'waypoint:left', 'vehicle_left:None', 'vehicle_right:left', 'vehicle_oncoming:left')
+ -- forward : 0.00
+ -- None : 0.00
+ -- right : -0.31
+ -- left : 0.00
+
+('light:green', 'waypoint:forward', 'vehicle_left:forward', 'vehicle_right:forward', 'vehicle_oncoming:None')
+ -- forward : 0.00
+ -- None : -2.98
+ -- right : 0.90
+ -- left : 0.00
+
+('light:green', 'waypoint:left', 'vehicle_left:forward', 'vehicle_right:right', 'vehicle_oncoming:right')
+ -- forward : 0.00
+ -- None : -2.38
+ -- right : 0.00
+ -- left : 0.00
+
+('light:green', 'waypoint:forward', 'vehicle_left:None', 'vehicle_right:forward', 'vehicle_oncoming:right')
+ -- forward : 0.00
+ -- None : 0.00
+ -- right : 0.00
+ -- left : -0.05
+
+('light:red', 'waypoint:left', 'vehicle_left:left', 'vehicle_right:None', 'vehicle_oncoming:forward')
+ -- forward : 0.00
+ -- None : 0.85
+ -- right : 0.00
+ -- left : 0.00
+
+('light:green', 'waypoint:forward', 'vehicle_left:left', 'vehicle_right:forward', 'vehicle_oncoming:left')
+ -- forward : 1.05
+ -- None : 0.00
+ -- right : 0.00
+ -- left : 0.00
+
+('light:green', 'waypoint:left', 'vehicle_left:left', 'vehicle_right:left', 'vehicle_oncoming:right')
+ -- forward : 0.00
+ -- None : -2.06
+ -- right : 0.00
+ -- left : 0.00
+
+('light:red', 'waypoint:forward', 'vehicle_left:right', 'vehicle_right:left', 'vehicle_oncoming:forward')
+ -- forward : 0.00
+ -- None : 0.00
+ -- right : 0.00
+ -- left : 0.00
+
+('light:green', 'waypoint:left', 'vehicle_left:None', 'vehicle_right:None', 'vehicle_oncoming:right')
+ -- forward : 0.00
+ -- None : -2.94
+ -- right : 0.00
+ -- left : 1.70
+
+('light:green', 'waypoint:right', 'vehicle_left:right', 'vehicle_right:None', 'vehicle_oncoming:forward')
+ -- forward : 0.54
+ -- None : -2.14
+ -- right : 0.00
+ -- left : 0.00
+
+('light:red', 'waypoint:left', 'vehicle_left:forward', 'vehicle_right:forward', 'vehicle_oncoming:left')
+ -- forward : 0.00
+ -- None : 1.40
+ -- right : 0.00
+ -- left : -20.06
+
+('light:green', 'waypoint:right', 'vehicle_left:None', 'vehicle_right:None', 'vehicle_oncoming:None')
+ -- forward : 0.25
+ -- None : -4.21
+ -- right : 0.00
+ -- left : 0.84
+
+('light:green', 'waypoint:right', 'vehicle_left:None', 'vehicle_right:None', 'vehicle_oncoming:left')
+ -- forward : 0.58
+ -- None : -2.85
+ -- right : 0.96
+ -- left : 0.56
+
+('light:green', 'waypoint:right', 'vehicle_left:forward', 'vehicle_right:None', 'vehicle_oncoming:forward')
+ -- forward : 0.00
+ -- None : 0.00
+ -- right : 1.75
+ -- left : 0.00
+
+('light:red', 'waypoint:left', 'vehicle_left:None', 'vehicle_right:None', 'vehicle_oncoming:forward')
+ -- forward : -5.11
+ -- None : 2.20
+ -- right : 1.12
+ -- left : -7.11
+
+('light:red', 'waypoint:right', 'vehicle_left:left', 'vehicle_right:None', 'vehicle_oncoming:forward')
+ -- forward : 0.00
+ -- None : 0.14
+ -- right : 0.00
+ -- left : 0.00
+
+('light:green', 'waypoint:forward', 'vehicle_left:left', 'vehicle_right:forward', 'vehicle_oncoming:None')
+ -- forward : 0.00
+ -- None : 0.00
+ -- right : 0.67
+ -- left : 0.00
+
+('light:red', 'waypoint:left', 'vehicle_left:None', 'vehicle_right:right', 'vehicle_oncoming:forward')
+ -- forward : 0.00
+ -- None : 0.00
+ -- right : -0.05
+ -- left : 0.00
+
+('light:red', 'waypoint:left', 'vehicle_left:forward', 'vehicle_right:None', 'vehicle_oncoming:None')
+ -- forward : -20.14
+ -- None : 0.90
+ -- right : -10.41
+ -- left : -20.33
+
+('light:red', 'waypoint:forward', 'vehicle_left:left', 'vehicle_right:None', 'vehicle_oncoming:right')
+ -- forward : -5.17
+ -- None : 0.00
+ -- right : 0.00
+ -- left : 0.00
+
+('light:red', 'waypoint:left', 'vehicle_left:None', 'vehicle_right:None', 'vehicle_oncoming:left')
+ -- forward : -7.95
+ -- None : 1.74
+ -- right : 0.00
+ -- left : -7.75
+
+('light:red', 'waypoint:right', 'vehicle_left:None', 'vehicle_right:None', 'vehicle_oncoming:right')
+ -- forward : -5.45
+ -- None : 0.00
+ -- right : 1.48
+ -- left : 0.00
+
+('light:red', 'waypoint:left', 'vehicle_left:left', 'vehicle_right:forward', 'vehicle_oncoming:forward')
+ -- forward : 0.00
+ -- None : 0.00
+ -- right : 0.00
+ -- left : -20.48
+
+('light:red', 'waypoint:right', 'vehicle_left:right', 'vehicle_right:None', 'vehicle_oncoming:left')
+ -- forward : 0.00
+ -- None : 0.20
+ -- right : 0.00
+ -- left : 0.00
+
+('light:green', 'waypoint:forward', 'vehicle_left:forward', 'vehicle_right:left', 'vehicle_oncoming:None')
+ -- forward : 0.00
+ -- None : 0.00
+ -- right : 0.79
+ -- left : 0.00
+
+('light:red', 'waypoint:left', 'vehicle_left:right', 'vehicle_right:forward', 'vehicle_oncoming:None')
+ -- forward : 0.00
+ -- None : 0.00
+ -- right : 0.65
+ -- left : 0.00
+
+('light:green', 'waypoint:left', 'vehicle_left:None', 'vehicle_right:None', 'vehicle_oncoming:None')
+ -- forward : 0.00
+ -- None : -2.99
+ -- right : 0.00
+ -- left : 1.00
+
+('light:red', 'waypoint:right', 'vehicle_left:right', 'vehicle_right:None', 'vehicle_oncoming:None')
+ -- forward : 0.00
+ -- None : 0.00
+ -- right : 0.00
+ -- left : -4.81
+
+('light:green', 'waypoint:forward', 'vehicle_left:None', 'vehicle_right:forward', 'vehicle_oncoming:left')
+ -- forward : 0.00
+ -- None : 0.00
+ -- right : 0.00
+ -- left : 0.00
+
+('light:green', 'waypoint:forward', 'vehicle_left:None', 'vehicle_right:forward', 'vehicle_oncoming:None')
+ -- forward : 0.00
+ -- None : 0.00
+ -- right : 0.00
+ -- left : 0.07
+
+('light:red', 'waypoint:forward', 'vehicle_left:forward', 'vehicle_right:None', 'vehicle_oncoming:forward')
+ -- forward : 0.00
+ -- None : 0.19
+ -- right : 0.00
+ -- left : 0.00
+
+('light:red', 'waypoint:left', 'vehicle_left:forward', 'vehicle_right:None', 'vehicle_oncoming:left')
+ -- forward : 0.00
+ -- None : 0.00
+ -- right : -9.76
+ -- left : 0.00
+
+('light:red', 'waypoint:forward', 'vehicle_left:None', 'vehicle_right:forward', 'vehicle_oncoming:left')
+ -- forward : 0.00
+ -- None : 0.00
+ -- right : 0.55
+ -- left : 0.00
+
+('light:green', 'waypoint:left', 'vehicle_left:forward', 'vehicle_right:right', 'vehicle_oncoming:None')
+ -- forward : 0.00
+ -- None : 0.00
+ -- right : 0.00
+ -- left : 1.25
+
+('light:green', 'waypoint:left', 'vehicle_left:right', 'vehicle_right:None', 'vehicle_oncoming:forward')
+ -- forward : 0.00
+ -- None : -2.76
+ -- right : 0.00
+ -- left : 0.00
+
+('light:green', 'waypoint:forward', 'vehicle_left:None', 'vehicle_right:right', 'vehicle_oncoming:right')
+ -- forward : 0.00
+ -- None : 0.00
+ -- right : 0.00
+ -- left : 0.23
+
+('light:green', 'waypoint:left', 'vehicle_left:left', 'vehicle_right:None', 'vehicle_oncoming:None')
+ -- forward : -0.22
+ -- None : 0.00
+ -- right : 0.00
+ -- left : 1.86
+
+('light:green', 'waypoint:forward', 'vehicle_left:forward', 'vehicle_right:right', 'vehicle_oncoming:None')
+ -- forward : 0.00
+ -- None : -2.94
+ -- right : 0.00
+ -- left : 0.00
+
+('light:green', 'waypoint:right', 'vehicle_left:left', 'vehicle_right:None', 'vehicle_oncoming:forward')
+ -- forward : 0.00
+ -- None : 0.00
+ -- right : 0.00
+ -- left : 0.29
+
+('light:green', 'waypoint:forward', 'vehicle_left:forward', 'vehicle_right:left', 'vehicle_oncoming:right')
+ -- forward : 0.00
+ -- None : 0.00
+ -- right : 0.00
+ -- left : 0.00
+
+('light:red', 'waypoint:right', 'vehicle_left:right', 'vehicle_right:right', 'vehicle_oncoming:forward')
+ -- forward : 0.00
+ -- None : 0.73
+ -- right : 0.00
+ -- left : 0.00
+
+('light:red', 'waypoint:forward', 'vehicle_left:left', 'vehicle_right:None', 'vehicle_oncoming:None')
+ -- forward : 0.00
+ -- None : 0.77
+ -- right : 0.74
+ -- left : 0.00
+
+('light:green', 'waypoint:right', 'vehicle_left:right', 'vehicle_right:left', 'vehicle_oncoming:None')
+ -- forward : 0.00
+ -- None : 0.00
+ -- right : 0.00
+ -- left : 0.00
+
+('light:red', 'waypoint:left', 'vehicle_left:None', 'vehicle_right:right', 'vehicle_oncoming:left')
+ -- forward : 0.00
+ -- None : 0.00
+ -- right : 0.00
+ -- left : -5.17
+
+('light:red', 'waypoint:left', 'vehicle_left:None', 'vehicle_right:right', 'vehicle_oncoming:None')
+ -- forward : 0.00
+ -- None : 0.00
+ -- right : 0.00
+ -- left : -5.29
+
+('light:green', 'waypoint:left', 'vehicle_left:right', 'vehicle_right:forward', 'vehicle_oncoming:forward')
+ -- forward : 0.00
+ -- None : 0.00
+ -- right : 0.30
+ -- left : 0.00
+
+('light:green', 'waypoint:right', 'vehicle_left:right', 'vehicle_right:None', 'vehicle_oncoming:left')
+ -- forward : 0.00
+ -- None : -2.19
+ -- right : 0.00
+ -- left : 0.00
+
+('light:green', 'waypoint:right', 'vehicle_left:right', 'vehicle_right:None', 'vehicle_oncoming:None')
+ -- forward : 0.00
+ -- None : 0.00
+ -- right : 0.69
+ -- left : 0.00
+
+('light:green', 'waypoint:forward', 'vehicle_left:None', 'vehicle_right:None', 'vehicle_oncoming:left')
+ -- forward : 0.00
+ -- None : -2.45
+ -- right : 0.80
+ -- left : 0.00
+
+('light:green', 'waypoint:forward', 'vehicle_left:None', 'vehicle_right:None', 'vehicle_oncoming:None')
+ -- forward : 2.48
+ -- None : -2.77
+ -- right : 1.10
+ -- left : 0.00
+
+('light:green', 'waypoint:right', 'vehicle_left:None', 'vehicle_right:None', 'vehicle_oncoming:forward')
+ -- forward : 0.00
+ -- None : 0.00
+ -- right : 1.42
+ -- left : 0.19
+
+('light:green', 'waypoint:right', 'vehicle_left:forward', 'vehicle_right:left', 'vehicle_oncoming:None')
+ -- forward : 0.00
+ -- None : 0.00
+ -- right : 1.01
+ -- left : 0.00
+
+('light:red', 'waypoint:left', 'vehicle_left:left', 'vehicle_right:right', 'vehicle_oncoming:forward')
+ -- forward : 0.00
+ -- None : 0.67
+ -- right : 0.00
+ -- left : 0.00
+
+('light:red', 'waypoint:right', 'vehicle_left:left', 'vehicle_right:None', 'vehicle_oncoming:None')
+ -- forward : 0.00
+ -- None : 0.94
+ -- right : 0.00
+ -- left : 0.00
+
+('light:green', 'waypoint:left', 'vehicle_left:None', 'vehicle_right:forward', 'vehicle_oncoming:left')
+ -- forward : 0.00
+ -- None : -2.93
+ -- right : 0.00
+ -- left : 0.00
+
+('light:green', 'waypoint:right', 'vehicle_left:None', 'vehicle_right:left', 'vehicle_oncoming:right')
+ -- forward : 0.00
+ -- None : 0.00
+ -- right : 1.18
+ -- left : 0.00
+
