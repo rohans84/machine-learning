@@ -15,13 +15,12 @@ This project will be referring only to this provided P&P document to perform the
 
 [BusinessDictionary.com](http://www.businessdictionary.com) defines Policies and Procedures as:
 
-````
-A set of policies are principles, rules, and guidelines formulated or adopted by an organization to reach its long-term goals and typically published in a booklet or other form that is widely accessible.
+> A set of policies are principles, rules, and guidelines formulated or adopted by an organization to reach its long-term goals and typically published in a booklet or other form that is widely accessible.
 
-Policies and procedures are designed to influence and determine all major decisions and actions, and all activities take place within the boundaries set by them. Procedures are the specific methods employed to express policies in action in day-to-day operations of the organization.
+> Policies and procedures are designed to influence and determine all major decisions and actions, and all activities take place within the boundaries set by them. Procedures are the specific methods employed to express policies in action in day-to-day operations of the organization.
 
-Together, policies and procedures ensure that a point of view held by the governing body of an organization is translated into steps that result in an outcome compatible with that view.
-````
+> Together, policies and procedures ensure that a point of view held by the governing body of an organization is translated into steps that result in an outcome compatible with that view.
+
 from:  http://www.businessdictionary.com/definition/policies-and-procedures.html
 
 Thus, it can be clearly understood that the P&P documents serve as a very critical framework for organizations to run smoothly. They are necessitated not just by business goals but in many cases also are required to be adhered to by Federal, State & local level laws.
