@@ -89,6 +89,7 @@ curl -d '{"question":"What needs to be done in case of emergency?"}' -H 'Content
 Responses received for each question and the score value evaluated is provided in the worksheet - 
 
 Here is the summary of the test results:
+
 |Description|Count|
 |-----------|-----|
 |Total topics|34|
